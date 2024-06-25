@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_container"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white">
+
+        <ImageView
+            android:id="@+id/click_full"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_notifications"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_gravity="end"
+            app:tint="@color/white"
+            android:contentDescription="@string/todo" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include layout="@layout/content_main"/>
+
+</RelativeLayout>
+

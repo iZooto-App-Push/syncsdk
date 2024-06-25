@@ -1,0 +1,28 @@
+image: androidsdk/android-30
+
+pipelines:
+  default:
+    - parallel:
+        - step:
+            name: Android Debug Application
+            caches:
+              - gradle
+            script:
+              - ./gradlew assembleDebug
+            artifacts:
+              - app/build/outputs/**
+
+        - step:
+            name: App Unit Test
+            caches:
+              - gradle
+            script:
+              - ./gradlew :app:testDebugUnitTest
+        - step:
+            name: AAR File Creation
+            caches:
+              - gradle
+            script:
+              -  ./gradlew assemble
+            artifacts:
+              - izooto/build/outputs/aar/izooto-release.aar
