@@ -20,7 +20,7 @@ public class AppController extends Application implements NotificationHelperList
                 .setLandingURLListener(this)
                 .setTokenReceivedListener(token -> {}).build();
 
-       iZooto.setSubscription(true);
+      // iZooto.setSubscription(true);
        iZooto.promptForPushNotifications();
 
 
@@ -30,6 +30,8 @@ public class AppController extends Application implements NotificationHelperList
     @Override
     public void onNotificationReceived(Payload payload) {
         Log.e("Notification", payload.getTitle());
+        Log.e("NotificationMessage ", payload.getMessage());
+
 
     }
 
