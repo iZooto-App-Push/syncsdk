@@ -7,7 +7,6 @@ android {
     compileSdk 34
 
     defaultConfig {
-
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 33
@@ -15,10 +14,9 @@ android {
         versionName "1.2.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
-
         manifestPlaceholders = [
-                izooto_app_id: "f8908fd9817ad7f76dea934067955773a8f1c3d5"
-        ]//c9b6baa1198c2adeb9ba370422077ecf22360cf9 //09f06385e06cc10d0fc7a5e1c002cd9338a2c94f
+                izooto_app_id: "09f06385e06cc10d0fc7a5e1c002cd9338a2c94f"
+        ]
 
     }
 
@@ -46,11 +44,13 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.browser:browser:1.8.0'
-    implementation platform('com.google.firebase:firebase-bom:33.0.0')
+    implementation platform('com.google.firebase:firebase-bom:33.1.1')
     implementation 'com.google.firebase:firebase-messaging'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     implementation("androidx.credentials:credentials:1.2.2")
     implementation("androidx.credentials:credentials-play-services-auth:1.2.2")
     implementation("com.google.android.libraries.identity.googleid:googleid:1.1.0")
+    implementation ('com.comscore:android-analytics:6.11.1')
+    implementation ('com.google.android.gms:play-services-appset:16.1.0')
 }

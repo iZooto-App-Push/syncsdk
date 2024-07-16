@@ -4,10 +4,13 @@ import android.app.Application;
 import android.content.Intent;
 import android.os.Build;
 import android.util.Log;
+
 import androidx.annotation.RequiresApi;
+
 import com.izooto.NotificationHelperListener;
 import com.izooto.NotificationWebViewListener;
 import com.izooto.Payload;
+import com.izooto.TokenReceivedListener;
 import com.izooto.iZooto;
 
 public class AppController extends Application implements NotificationHelperListener, NotificationWebViewListener {
@@ -18,10 +21,12 @@ public class AppController extends Application implements NotificationHelperList
         iZooto.initialize(this)
                 .setNotificationReceiveListener(this)
                 .setLandingURLListener(this)
-                .setTokenReceivedListener(token -> {}).build();
+                .setTokenReceivedListener(token -> {
+                    Log.i("TokenReceived", token);
+                }).build();
 
-      // iZooto.setSubscription(true);
        iZooto.promptForPushNotifications();
+     //  iZooto.setSubscription();
 
 
 

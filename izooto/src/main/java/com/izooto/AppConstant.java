@@ -3,6 +3,7 @@ package com.izooto;
 public interface AppConstant {
 
     String APP_NAME_TAG = "iZooto";
+
     String FCM_DEVICE_TOKEN = "deviceToken";
     String SDK_NAME = "IZOOTO";
     String DEVICE_TOKEN = "DEVICE TOKEN   ->  ";
@@ -27,8 +28,6 @@ public interface AppConstant {
     String APPPID = "pid";
     String ENCRYPTED_PID = "encryptedPid";
     String ADVERTISING_ID = "add";
-    String GET_NOTIFICATION_ENABLED = "enable";
-    String GET_NOTIFICATION_DISABLED = "disable";
     String FIREBASE_ANALYTICS_TRACK = "isCheck";
     String TRACK_NOTIFICATION_ID = "notificationId";
     String IS_NOTIFICATION_ID_UPDATED = "notificationIdUpdated";
@@ -118,9 +117,12 @@ public interface AppConstant {
     String FAILURE = " Request Failed: ";
     String ATTACHREQUEST = "IZooTo RestClient: ResponseHandler is not attached for the Request: ";
     String EXCEPTIONERROR = "Thrown Error";
-    String MISSINGID = "iZooto App Id is missing.";
+    String CDN = "https://cdn.izooto.com/app/app_";
+    String MISSINGID = "App Id is missing.";
     // Register String
     String SENDERID = "senderId";
+    String APPID = "appId";
+    String APIKEY = "apiKey";
     String ID = "id";
     String RID = "rid";
     String TAG = "TAG";
@@ -179,7 +181,7 @@ public interface AppConstant {
     String IS_HYBRID_SDK = "hybrid";
     String CURRENT_DATE_VIEW = "currentDateView";
     String CURRENT_DATE_CLICK = "currentDateClick";
-    String SDKVERSION = "2.5.2";
+    String SDKVERSION = "2.6.0";
     String QSDK_VERSION = "av";
     String SDK = "SDKVERSION";
     String AD_NETWORK = "an";
@@ -384,6 +386,14 @@ public interface AppConstant {
     String PUSH_TYPE = "pushType";
     String FCM_TYPE = "gcm";
     String PW_EVENTS = "pw_events";
+    String APP_ID = "app_id";
+    String CHECK_SUBSCRIPTION = "isSubscription";
+    String IZ_TIME_OUT = "isTimeOut";
+    String CAM_SCORE_ID="cs";
+    String CHECK_COM_SDK = "ComScore Library is missing, Kindly add app gradle file and build again..";
+    String CHECK_COM_ID = "ComScore Publisher Id is missing,kindly contact with support team";
+
+
 
 }
 
